@@ -1,0 +1,80 @@
+.trapezoid {
+  border-bottom: 50px solid rgba(0, 0, 0, 0.15);
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  height: 0;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  /* background-color: rgba(0, 0, 0, .15);  */
+  filter: drop-shadow(0px 128px 63px rgba(8, 8, 8, 0.38));
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 0px 0px, rgba(0, 0, 0, 0.09) 0px 40px 35px 2px;
+}
+
+.seat {
+  background-color: #444451;
+  height: 26px;
+  width: 26px;
+  margin: 10px 16px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  transition: all 0.2s;
+}
+
+.seat.selected {
+  background-color: #6feaf6 !important;
+  /* transform: scale(1.5); */
+}
+
+.seat.occupied {
+  background-color: rgb(239 68 68) !important;
+}
+
+.seat.vip {
+  background-color: orange;
+}
+
+.seat.mySeat {
+  background-color: rgb(16 185 129) !important;
+}
+
+.seat.clientSeat {
+  background-color: rgb(114, 51, 150) !important;
+  cursor: no-drop;
+}
+
+.seat:not(.occupied):not(.clientSeat):hover {
+  cursor: pointer;
+  transform: scale(1.5);
+}
+
+.showcase .seat:not(.occupied):hover {
+  cursor: default;
+  transform: scale(1);
+}
+
+.showcase {
+  background: rgba(0, 0, 0, 0.15);
+  padding: 5px 10px;
+  border-radius: 5px;
+  color: #777;
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+}
+
+.showcase li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 10px;
+}
+
+.tabCheckOut .ant-tabs > .ant-tabs-nav,
+.ant-tabs > div > .ant-tabs-nav {
+  position: fixed;
+  padding-left: 10px;
+  background-color: #fff;
+  width: 100%;
+  z-index: 10;
+}

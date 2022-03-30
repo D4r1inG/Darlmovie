@@ -1,0 +1,9 @@
+.info_wrap h3::after {
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background: rgb(124 58 237 );
+    content: '';
+}
